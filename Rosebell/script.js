@@ -186,18 +186,15 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     setTimeout(function() {
         document.getElementById("successMessage").style.display = "block";
         clearForm();
-    }, 2000);
+    }, 1000);
 });
 
 function clearForm() {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("subject").value = "";
-    document.getElementById("message").value = "";
+    document.getElementById("name").value = " ";
+    document.getElementById("email").value = " ";
+    document.getElementById("subject").value = " ";
+    document.getElementById("message").value = " ";
 }
-
-
-
 
 var userName = document.getElementById('name').value;
 var subject = document.getElementById('subject').value;
@@ -207,11 +204,11 @@ var messageEl = document.getElementById('message')
 var messageBody = "Name " + userName + "phone " + Phone + "Email " + emailEl;
 
 function emailSend(){
-    Email.send({
+    emailEl.send({
         Host : "smtp.elasticemail.com",
         Username : "emmanuelonjoro@gmail.com",
         Password : "ABC7B1474CBAD52BED82B3D76183FBC35DF8",
-        To : 'eonjoro36@gmail.com',
+        To : 'wariararosebell04@gmail.com',
         From : "emmanuelonjoro@gmail.com",
         Subject : subject,
         Body : messageBody

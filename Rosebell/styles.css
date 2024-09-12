@@ -197,19 +197,39 @@
 .nav-menu-btn{
     display: none;
 }
-.home-image img{
-    height: 40vh;
-    border: #6a59d1;
-    border-radius: 70pc 100px 70pc;
-    padding: 20px;
-    
+
+/* Home image */
+
+.home-img {
+    width: 35.33%; /* One-third of the screen width */
+    margin: 0 auto; /* Centers the div horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.home-img img {
+border-radius: 15px;
+    width: 100%; /* Make the image fill the div's width */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Ensures the image covers the div without distortion */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .home-img {
+        width: 80%; /* Adjusts the width to 80% for smaller screens */
+    }
+}
+
+
 
    /* ===========Home Section========= */
 .home{
     background-position: center;
     background-size: cover;
     position: relative;
+    /* background: url(images/about-me.jpg); */
     max-width: 1250px;
     min-height: 100vh;
     margin-left: auto;
@@ -241,7 +261,6 @@
     font-weight: 600;
     line-height: 70px;
 }
-
 .home-container .info h3{
     color: var(--third-color);
     font-feature-settings: 1.3em;
@@ -252,6 +271,13 @@
     color: var(--third-color);
     font-size: var(--normal-font-size);
     max-width: 350px;
+}
+.home-image img{
+    height: 40vh;
+    width: 350px;
+    border: #6a59d1;
+    border-radius: 70px 100px 70px;
+    padding: 20px;    
 }
 .btn{
     background: var(--second-color);
